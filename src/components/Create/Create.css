@@ -1,0 +1,123 @@
+.outerCreate{
+    /* border: 2px solid; */
+    margin-top: 120px ;
+    /* background-color: azure; */
+    background-color: rgb(232, 227, 227);
+
+    height: 150vh;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+}
+.createbox{
+    /* border: 2px solid red; */
+    background-color: #fff;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    margin: 100px auto;
+    height: 100%;
+    display: flex;
+    /* padding: auto; */
+    flex-direction: column;
+    align-items: center;
+    width: 160vh;
+    /* margin: auto; */
+
+}
+.createbox .heading{
+    font-size: 30px;
+    text-align: left;
+    /* border: 2px solid; */
+    width: 120vh;
+    margin-top: 40px;
+}
+
+.create_form{
+    /* border: 2px solid red;    */
+    width: 150vh;
+    display: flex;
+    justify-content: center; 
+}
+.create_form div{
+    margin: 30px 20px;
+
+}
+
+.create_form div input{
+    padding: 10px 10px ;
+    width: 120vh;
+    font-weight: 700;
+
+}
+.photo input{
+    /* display: none; */
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+  .file-input label {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    /* box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    margin-left: -20px;
+  }
+
+  
+  .category p{
+    margin: 15px 0px;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .category select{
+    padding: 10px 10px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 40px;
+
+  }
+  .category select .option {
+    padding: 10px 10px;
+    width: 300px;
+
+  }
+
+  .create_button button{
+    padding: 10px 20px;
+    width: 120vh;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: large;
+    background-color: #7873f5;
+    color: white;
+    border: transparent;
+    border-radius: 6px;
+    
+  }
+
+  .clubDescription textarea {
+    /* width: 900px; */
+    padding: 10px 10px;
+
+  }
+
+
+
+  /* For Select MEnu */
+  
+  /* for select Menu */
