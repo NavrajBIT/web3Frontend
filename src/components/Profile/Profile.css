@@ -2,78 +2,88 @@
     border: 2px solid red;
     height: 100%;
 } */
-*{
-    font-family: 'Roboto Mono', monospace;
-
+* {
+  font-family: "Roboto Mono", monospace;
 }
-.profile_box{
-    /* border: 2px solid red; */
-    height: 150px;
-    background-color: aliceblue;
-    margin-top: 115px;
-}
-
-.profile_picture{
-    /* border: 2px solid red; */
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin-top: -8%;
-    margin-left: 42%;
-    background-color: aliceblue;
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+.profile_box {
+  /* border: 2px solid red; */
+  height: 150px;
+  background-color: aliceblue;
+  margin-top: 115px;
 }
 
-.profile_picture img{
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+.profile_picture {
+  /* border: 2px solid red; */
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: -8%;
+  margin-left: 42%;
+  background-color: aliceblue;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
-.details{
-    margin-top: 20px;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.details .name p{
-    font-weight: 700;
-
+.profile_picture img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.details div{
-    margin: 10px 10px;
+.details {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.details .wallet_address p{
-    letter-spacing: 1.6px;
-    font-weight: 800;
-    color: grey;
+.details .name p {
+  font-weight: 700;
 }
-.details .editButton button{
-    margin-top: 10px;
-    padding: 15px 30px;
-    font-weight: 700;
-    border: 1px solid whitesmoke;
-    cursor: pointer;
 
-
-} 
+.details div {
+  margin: 10px 10px;
+}
+.details .wallet_address p {
+  letter-spacing: 1.6px;
+  font-weight: 800;
+  color: grey;
+}
+.details .editButton button {
+  margin-top: 10px;
+  padding: 15px 30px;
+  font-weight: 700;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+}
 
 .options {
-    display: flex;
-    align-items: center;
+  display: grid;
+  align-items: left;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-.options div{
-    margin: 0px 80px;
-    cursor: pointer;
-    font-size: 17px !important;
+.options div {
+  margin: 0px 80px;
+  cursor: pointer;
+  font-size: 17px !important;
 }
 
-.options div:hover{
-    color: blue;
+.option {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+.option:hover {
+  color: blue;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.myoptions {
+  display: flex;
+  flex-direction: column;
 }

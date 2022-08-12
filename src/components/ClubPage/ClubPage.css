@@ -1,0 +1,58 @@
+.clubDetails {
+  margin-top: 120px;
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 40px 20px;
+}
+
+.clubPic {
+  height: 300px;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 150px;
+}
+
+.clubPic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 150px;
+}
+
+.clubData {
+  padding: 40px;
+}
+
+.clubPostContainer {
+  padding: 40px 20px;
+}
+
+.newPost {
+  background-color: white;
+}
+
+.newPost textarea {
+  width: 100%;
+  padding: 20px;
+}
+
+.postButton button {
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 10px;
+}
+
+.post {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0px 20px 20px 20px;
+  margin: 20px 0px;
+}
+
+.post .postedBy {
+  font-size: 10px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}

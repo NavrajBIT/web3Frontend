@@ -4,25 +4,39 @@ import logo from "../../Images/BITlogo.png";
 
 // import useNavigation from "use-navigation";
 import { useNavigate } from "react-router";
+import { useState, useContext } from "react";
+import UserContext from "../../context/UserContext";
 
-const Navbar = (props) => {
+const Navbar = () => {
   const navigate = useNavigate();
+  const user = useContext(UserContext);
+
+  const shortAccount = () => {
+    let accountLength = user.userAccount.length;
+    let firstPart = user.userAccount.slice(0, 5);
+    let lastPart = user.userAccount.slice(accountLength - 5, accountLength - 1);
+    return firstPart + "..." + lastPart;
+  };
 
   return (
     <>
       <div className="login_nav">
         <div className="logo">
-          <img onClick={() => {
-            navigate("/")
-          }}  src={logo} alt="" />
+          <img
+            onClick={() => {
+              navigate("/");
+            }}
+            src={logo}
+            alt="Beyong Imagination Technologies"
+          />
         </div>
 
-        {props.connectText === "Connected" && (
+        {user.isConnected && (
           <>
             <div className="createButton">
               <button
                 onClick={() => {
-                  if (props.connectText === "Connected") {
+                  if (user.isConnected) {
                     navigate("/create");
                   }
                 }}
@@ -30,15 +44,10 @@ const Navbar = (props) => {
                 Create
               </button>
             </div>
-          </>
-        )}
-
-        {props.connectText === "Connected" && (
-          <>
             <div className="clubButton">
               <button
                 onClick={() => {
-                  if (props.connectText === "Connected") {
+                  if (user.isConnected) {
                     navigate("/clubs");
                   }
                 }}
@@ -48,15 +57,18 @@ const Navbar = (props) => {
             </div>
           </>
         )}
+
         <div className="connect_button">
           <button
             onClick={() => {
-              if (props.connectText === "Connect Wallet") {
-                navigate("/clubs");
+              if (user.isConnected) {
+                navigate("/profile");
+              } else {
+                user.login();
               }
             }}
           >
-            {props.connectText}
+            {user.isConnected ? shortAccount() : "Connect"}
           </button>
         </div>
       </div>

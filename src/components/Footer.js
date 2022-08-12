@@ -1,25 +1,24 @@
-import React from 'react'
-import "./Login.css"
+import React from "react";
+import "./Login.css";
 const Footer = () => {
   return (
-    <div className="footer_bg" style={{
-        background:"black",
-        color:"white",
-        height:"80px",
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center"
-
-
-
-    }}>
-    <div className="copyright" style={{
-
-    }}>
-      Copyright © 2022 Beyond Imagination Technologies Pvt. Ltd. All right reserved.
+    <div
+      className="footer_bg"
+      style={{
+        background: "black",
+        color: "white",
+        paddingTop: "80px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div className="copyright" style={{ padding: "80px" }}>
+        Copyright © 2022 Beyond Imagination Technologies Pvt. Ltd. All right
+        reserved.
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

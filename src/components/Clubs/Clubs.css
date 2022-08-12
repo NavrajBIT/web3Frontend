@@ -1,85 +1,82 @@
-.navbar_box{
-    /* border: 2px solid red; */
-    height: 115px;
-    /* position: absolute; */
-    /* position: relative !important    ; */
+.navbar_box {
+  /* border: 2px solid red; */
+  height: 115px;
+  /* position: absolute; */
+  /* position: relative !important    ; */
 }
 
-.club_box{
-    /* border: 2px solid ; */
-    background-color: rgb(232, 227, 227);
-    height: 100%;
+.club_box {
+  /* border: 2px solid ; */
+  padding-top: 115px;
+  background-color: rgb(232, 227, 227);
+  height: 100%;
 }
 
-.club_info{
-    /* border: 2px solid red; */
-    width: 180vh;
-    margin:10px auto;
-    /* height: 100vh; */
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-around;
+.club_info {
+  /* border: 2px solid red; */
+  width: 180vh;
+  margin: 10px auto;
+  /* height: 100vh; */
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-around;
 }
-.category_list ul li{
-    list-style: none;
-    margin: 40px 10px;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    /* border: 2px solid; */
-    width:200px ;
-    padding: 10px 30px;
-}
-
-.category_list ul li:hover{
-    background-color: white;
+.category_list ul li {
+  list-style: none;
+  margin: 10px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  /* border: 2px solid; */
+  width: 200px;
+  padding: 10px 30px;
 }
 
-
-.categories_heading .heading{
-    font-size: 22px;
-
+.category_list ul li:hover {
+  background-color: white;
 }
 
-.categories_heading{
-    /* flex: 10%; */
-    /* border: 2px solid; */
-    
+.categories_heading .heading {
+  font-size: 22px;
 }
 
-.categories_information{
-    /* border: 2px solid; */
-    width: 150vh;
-    margin-left: 30px;  
-    
+.categories_heading {
+  /* flex: 10%; */
+  /* border: 2px solid; */
 }
 
-.information_box{
-    /* border: 2px solid rebeccapurple; */
-    height: 25vh;
-    width: 110vh;
-    display: flex;
-    padding: 20px 30px;
-    background-color: white;
-    margin: 10px ;
+.categories_information {
+  /* border: 2px solid; */
+  width: 150vh;
+  margin-left: 30px;
 }
 
-.information_box .image_container img{
-    height: 80px;
-    width: 130px;
-    margin-top: 10px;
+.information_box {
+  /* border: 2px solid rebeccapurple; */
+  min-height: 200px;
+  width: 110vh;
+  display: flex;
+  padding: 20px 30px;
+  background-color: white;
+  margin: 10px;
 }
 
-.information_box .content_information{
-    margin-left: 50px;
+.information_box .image_container img {
+  height: 80px;
+  width: 130px;
+  margin-top: 10px;
 }
 
-.content_information .heading{
-    font-size: 20px;
-    margin-bottom: 10px;
+.information_box .content_information {
+  margin-left: 50px;
 }
 
-.content_information .members{
-    margin-top: 20px;
-    font-size: 20px;
+.content_information .heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content_information .members {
+  margin-top: 20px;
+  font-size: 20px;
 }

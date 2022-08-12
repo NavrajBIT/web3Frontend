@@ -6,18 +6,23 @@ import Profile from "./components/Profile/Profile";
 import Create from "./components/Create/Create";
 import Navbar from "./components/Navbar/Navbar";
 import Clubs from "./components/Clubs/Clubs";
+import UserState from "./context/userState";
+import ClubPage from "./components/ClubPage/ClubPage";
 function App() {
   return (
     <Router>
-      {/* <Navbar  /> */}
-      <Routes>
-        <Route path="/" element={<Login/>} />
-        <Route path="/profile" element={<Profile/>} />
-        <Route path="/create" element={<Create/>} />
-        <Route path="/clubs" element={<Clubs/>} />
+      <UserState>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/clubs" element={<Clubs />} />
 
-      </Routes>
-        {/* <Footer /> */}
+          <Route path="/club/:clubId" element={<ClubPage />} />
+        </Routes>
+        <Footer />
+      </UserState>
     </Router>
   );
 }
