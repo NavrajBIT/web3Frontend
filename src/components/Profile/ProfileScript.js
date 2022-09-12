@@ -5,11 +5,13 @@ import { getUserData, editUserData, getMyPosts, getMyClubs } from "../apiCalls";
 
 export const ProfileScript = () => {
   const user = useContext(UserContext);
-  const [userName, setUserName] = useState("unnamed");
+  const [userName, setUserName] = useState("Ramesh Kumar");
   const [userDescription, setUserDescription] = useState(
-    "No description provided."
+    "Blockchain Enthusiast."
   );
-  const [userPic, setUserPic] = useState("");
+  const [userPic, setUserPic] = useState(
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrhT96op_IVlSa_oL09-2NEihmsh95J_D_Nw&usqp=CAU"
+  );
   const [userPicRaw, setUserPicraw] = useState("");
   const [userPicPreview, setUserPicPreview] = useState("");
   const [status, setStatus] = useState("");
@@ -17,11 +19,11 @@ export const ProfileScript = () => {
   const [myposts, setMyposts] = useState([]);
   const [myClubs, setMyClubs] = useState([]);
 
-  useEffect(() => {
-    if (user.isConnected) {
-      poppulateUserData();
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (user.isConnected) {
+  //     poppulateUserData();
+  //   }
+  // }, [user]);
 
   const poppulateUserData = async () => {
     getUserData(user.userAccount).then((res) => {

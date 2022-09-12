@@ -10,24 +10,26 @@ const UserState = (props) => {
       : null;
   const signer = provider != null ? provider.getSigner() : null;
 
-  const [isConnected, setIsConnected] = useState(false);
-  const [userAccount, setUserAccount] = useState("");
+  const [isConnected, setIsConnected] = useState(true);
+  const [userAccount, setUserAccount] = useState(
+    "0xE858f0370b101cD3F58E03F18BFA1240a591b5Fa"
+  );
 
-  useEffect(() => {
-    if (signer != null) {
-      signer
-        .getAddress()
-        .then((res) => {
-          setUserAccount(res);
-          setIsConnected(true);
-        })
-        .catch((err) => {
-          setIsConnected(false);
-        });
-    } else {
-      setIsConnected(false);
-    }
-  }, [provider, signer]);
+  // useEffect(() => {
+  //   if (signer != null) {
+  //     signer
+  //       .getAddress()
+  //       .then((res) => {
+  //         setUserAccount(res);
+  //         setIsConnected(true);
+  //       })
+  //       .catch((err) => {
+  //         setIsConnected(false);
+  //       });
+  //   } else {
+  //     setIsConnected(false);
+  //   }
+  // }, [provider, signer]);
 
   const iswalletAvailable = window.ethereum != null;
 
