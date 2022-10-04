@@ -1,20 +1,27 @@
 .outerCreate{
-    /* border: 2px solid; */
-    margin-top: 120px ;
+    border: 2px solid;
+    /* margin-top: 120px ; */
     /* background-color: azure; */
-    background-color: rgb(232, 227, 227);
+    /* background-color: rgb(232, 227, 227); */
 
-    height: 150vh;
+    height: 200%;
     position: absolute;
     z-index: -1;
     width: 100%;
     top: 0;
+    background: url("../../Images/createPage.png");
+    /* background-size: 100% 100%; */
+    background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 .createbox{
-    /* border: 2px solid red; */
-    background-color: #fff;
+    border: 2px solid #1d3e58;
+    border-radius: 23px;
+    /* background-color: #fff; */
+    z-index: 1;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
-    margin: 100px auto;
+    margin: 200px auto;
     height: 100%;
     display: flex;
     /* padding: auto; */
@@ -22,6 +29,10 @@
     align-items: center;
     width: 160vh;
     /* margin: auto; */
+    background-color: #082943;
+    /* opacity: 10%; */
+    background: transparent;
+
 
 }
 .createbox .heading{
@@ -29,7 +40,9 @@
     text-align: left;
     /* border: 2px solid; */
     width: 120vh;
+    margin-left: -50px;
     margin-top: 40px;
+    color: white;
 }
 
 .create_form{
@@ -82,6 +95,7 @@
     margin: 15px 0px;
     font-weight: 800;
     font-size: 20px;
+    color: white;
   }
   .category select{
     padding: 10px 10px;

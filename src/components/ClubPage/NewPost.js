@@ -11,7 +11,7 @@ const NewPost = (props) => {
   return (
     <div className="newPost">
       <div className="newPostContent">
-        <textarea name="newpost" id="newpost" cols="30" rows="10"></textarea>
+        <textarea  placeholder="Enter Your Post Details Here ....." name="newpost" id="newpost" cols="30" rows="10"></textarea>
       </div>
       <div className="status">{status}</div>
       <div className="postButton">

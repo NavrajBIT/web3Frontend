@@ -1,15 +1,23 @@
-/* .navbar{
-    border: 2px solid red;
-    height: 100%;
-} */
+
 * {
   font-family: "Roboto Mono", monospace;
 }
+.background{
+  /* border: 2px solid greenyellow; */
+  margin-top: 100px;
+  background: url("../../Images//createPage.png");
+}
 .profile_box {
   /* border: 2px solid red; */
+  /* background-color: #1A2731; */
+  opacity: 50%;
+  /* z-index: -1; */
+  /* margin-top: 105px; */
+  /* paddion */
+  /* width: 100%; */
   height: 150px;
-  background-color: aliceblue;
-  margin-top: 115px;
+
+  /* position: absolute; */
 }
 
 .profile_picture {
@@ -20,6 +28,7 @@
   margin-top: -8%;
   margin-left: 42%;
   background-color: aliceblue;
+  z-index: 1;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
@@ -37,6 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .details .name p {
   font-weight: 700;
@@ -53,9 +63,12 @@
 .details .editButton button {
   margin-top: 10px;
   padding: 15px 30px;
-  font-weight: 700;
-  border: 1px solid whitesmoke;
+  font-weight: 900;
+  border: none;
   cursor: pointer;
+  background-color: #7873F5;
+  color: white;
+
 }
 
 .options {
@@ -63,20 +76,16 @@
   align-items: left;
   grid-template-columns: 1fr 1fr;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 120vh;
+  color: white;
 }
 
-.options div {
-  margin: 0px 80px;
-  cursor: pointer;
-  font-size: 17px !important;
+.option button{
+  padding: 20px 20px;
+  margin: 20px 20px;
 }
 
-.option {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 20px 10px;
-}
+ 
 
 .option:hover {
   color: blue;
@@ -86,4 +95,15 @@
 .myoptions {
   display: flex;
   flex-direction: column;
+}
+
+.myoptions button{
+  margin: 20px ;
+  padding: 10px 10px;
+  background-color: #63849E;
+  color: white;
+  border: none;
+  font-weight: 900;
+  border-radius: 23px;
+  cursor: pointer;
 }

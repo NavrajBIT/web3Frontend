@@ -29,6 +29,8 @@ const Profile = () => {
 
   return (
     <>
+    <div className="background">
+
       <div className="profile_box"></div>
       <div
         className="profile_picture"
@@ -107,7 +109,7 @@ const Profile = () => {
       <div className="more_info">
         <div className="options">
           <div className="myoptions">
-            <h3>My Posts</h3>
+            <button>My Posts</button>
             {myposts.map((post) => {
               return (
                 <div className="option" key={post.content}>
@@ -117,7 +119,7 @@ const Profile = () => {
             })}
           </div>
           <div className="myoptions">
-            <h3>My Clubs</h3>
+            <button>My Clubs</button>
             {myClubs.map((club) => {
               return (
                 <div
@@ -134,6 +136,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
+    </div>
+
     </>
   );
 };
