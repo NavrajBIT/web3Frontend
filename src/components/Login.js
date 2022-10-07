@@ -29,6 +29,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Footer from "./Footer";
 import Navbar from "./Navbar/Navbar";
 
+
 const Login = () => {
   const user = useContext(UserContext);
   const navigate = useNavigate();
@@ -94,7 +95,11 @@ const Login = () => {
         </motion.div>
 
         <div className="exploreButton">
-          <button>Explore More</button>
+          <button 
+          onClick={() => {
+            navigate("/explore")
+          }}
+          > Explore More</button>
         </div>
 
         <div className="aboutWeb3Club">
@@ -205,7 +210,15 @@ const Login = () => {
           <div className="heading"><h2>Enter The Future Of Web3 World</h2></div>
           <div className="subheading"><p>Leading the Web3 World Join The Revolution</p></div>
           <div className="buttons">
-            <button>Connect Wallet</button>
+            <button 
+               onClick={() => {
+              if (user.isConnected) {
+                navigate("/profile");
+              } else {
+                user.login();
+              }
+            }}
+            >Connect Wallet</button>
             <button>Learn More</button>
           </div>
         </div>

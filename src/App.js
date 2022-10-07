@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Clubs from "./components/Clubs/Clubs";
 import UserState from "./context/userState";
 import ClubPage from "./components/ClubPage/ClubPage";
+import ExploreMore from "./components/ExploreMore";
 function App() {
   return (
     <Router>
@@ -18,6 +19,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/create" element={<Create />} />
           <Route path="/clubs" element={<Clubs />} />
+          <Route path="/explore" element={<ExploreMore />} />
+
 
           <Route path="/club/:clubId" element={<ClubPage />} />
         </Routes>

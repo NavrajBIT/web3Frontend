@@ -1,35 +1,26 @@
- 
 .club_box {
-  border: 2px solid ;
+  border: 2px solid;
   padding-top: 115px;
-  /* background-color: rgb(232, 227, 227); */
-  height: 100%;
-  /* width: 100%; */
 
-  background:url("../../Images/createPage.png") ;
+  height: 100%;
+
+  background: url("../../Images/createPage.png");
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
+
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-
 }
 
 .club_info {
-  /* border: 2px solid red; */
   width: 180vh;
   margin: 10px auto;
-  /* height: 100vh; */
   padding: 30px 100px;
   display: flex;
   justify-content: space-around;
 }
-.categories_heading{
-  /* border: 2px solid red; */
+.categories_heading {
   padding: 0px 30px;
-  /* background-color: #082943; */
-  /* opacity: 90%; */
-  /* z-index: -1; */
 }
 .category_list ul li {
   list-style: none;
@@ -37,11 +28,10 @@
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  /* border: 2px solid; */
+
   width: 200px;
   padding: 10px 30px;
   color: white;
-  /* z-index: 1; */
 }
 
 .category_list ul li:hover {
@@ -53,19 +43,12 @@
   color: white;
 }
 
-.categories_heading {
-  /* flex: 10%; */
-  /* border: 2px solid; */
-}
-
 .categories_information {
-  /* border: 2px solid; */
   width: 150vh;
   margin-left: 30px;
 }
 
 .information_box {
-  /* border: 2px solid rebeccapurple; */
   min-height: 200px;
   width: 110vh;
   display: flex;

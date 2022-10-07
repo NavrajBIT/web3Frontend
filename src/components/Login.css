@@ -5,13 +5,6 @@
 }
 
 .outerbody{
-    
-    /* height: 100%; */
-    /* background-color:	floralwhite; */
-    /* background-color: rgb(170,219,30) !important; */
-
-    /* border: 2px solid floralwhite; */
-    /* position: relative; */
     background: url("../Images/BackGroundImage.png");
     
 }
@@ -19,15 +12,13 @@ hr{
         margin-left: auto;
         margin-right: auto;
         border: 1px solid grey;
-        /* color: white; */
+        
 
 }
 
 .login_nav{
-    /* border: 2px solid red; */
+    
     background: url("../Images/BackGroundImage.png");
-
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +26,7 @@ hr{
     width: 100%;
     top: 0%;
     color: white;
+    padding-bottom: 10px;
     /* background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%); */
 
 }
@@ -479,7 +471,7 @@ hr{
   }
 
   .extra .buttons {
-    /* border: 2px solid red; */
+  
     margin: 100px auto;
     display: flex;
     justify-content: space-around;
@@ -500,7 +492,6 @@ hr{
   }
 
   .extra .background{
-    /* border: 2px solid red; */
     height: 70vh;
     width: 50%;
     background:url("../Images/extra.jpg");
@@ -510,7 +501,41 @@ hr{
     z-index: -1;
     opacity: 50%;
     margin: 0px 25%;
-    /* border-radius-top: 30%; */
     border-top-left-radius: 40%;
     border-top-right-radius: 40%;
+  }
+
+
+  /* Explore More Css */
+  .explore{
+    margin-top: 110px;
+    border: 2px solid transparent;
+    /* height: 100vh; */
+    background:url("../Images/BackGroundImage.png") ;
+    /* margin-bottom: 20px; */
+  }
+
+  .explore .inner{
+    /* border: 2px solid red; */
+    height: 150vh;
+    width: 95%;
+    margin: 50px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* opacity: 20%; */
+    background-color: rgb(36, 36, 76);
+    border-radius: 23px;
+  }
+
+  .inner h2{
+    text-align: center;
+    /* margin-top: 310px; */
+    padding-top: 20px;
+    font-size: 60px;
+    color: rgb(115, 88, 212);
+
+  }
+  .inner .content p{
+    color: whitesmoke;
+    padding: 50px 50px;
+
   }
