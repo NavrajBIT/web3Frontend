@@ -35,7 +35,17 @@ const Login = () => {
   const navigate = useNavigate();
 
   const { scrollYProgress } = useScroll();
-  //   const arrow = "\\0279E";
+  
+  const scrollToBottom = () =>{ 
+    window.scrollTo({ 
+      top: document.documentElement.scrollHeight, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+    }); 
+  }; 
+
+
   const [clicked, setClicked] = useState(false);
   const container = {
     hidden: { opacity: 0 },
@@ -55,14 +65,15 @@ const Login = () => {
   return (
     <>
       <div className="outerbody">
-        <motion.div
+
+      <div className="outerbody_first_container">
+
+        {/* <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
-        />
-        {/* <div className="gradient"></div> */}
+        /> */}
 
         <div className="main_login_page">
-          <div className="login_box">
             <motion.div
               className="mainheading"
               initial={{ opacity: 0, scale: 0.5 }}
@@ -75,8 +86,8 @@ const Login = () => {
                 space and learn the latest happenings
               </h4>
             </motion.div>
-          </div>
-          <hr width="1000vh" />
+
+          {/* <hr width="1000vh" /> */}
           <div className="built_on">
             <h3>Built On - Polygon Network</h3>
             <img src={img2} alt="" />
@@ -89,18 +100,22 @@ const Login = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="img">
+          <div className="img1">
             <img src={img1} alt="" />
           </div>
         </motion.div>
 
         <div className="exploreButton">
           <button 
-          onClick={() => {
-            navigate("/explore")
+          style={{}}
+          onClick={() =>  {
+            // scrollYProgress(0);
+            scrollToBottom()
           }}
           > Explore More</button>
         </div>
+
+
 
         <div className="aboutWeb3Club">
           <div className="heading">
@@ -114,6 +129,12 @@ const Login = () => {
             </p>
           </div>
         </div>
+
+        </div>
+
+
+<div className="outerbody_second_container">
+
 
         <div className="whyUseWeb3">
           <div className="heading">
@@ -153,6 +174,10 @@ const Login = () => {
           {/* </div> */}
         </div>
 
+
+</div>
+
+<div className="outerbody_third_container">
 
         <div className="howToGetStarted">
           <div className="heading">
@@ -204,6 +229,8 @@ const Login = () => {
             </div>
           </div>
         </div>
+</div>
+
 
         <div className="extra">
           <div className="background"></div>
@@ -219,7 +246,10 @@ const Login = () => {
               }
             }}
             >Connect Wallet</button>
-            <button>Learn More</button>
+            <button 
+            onClick={() => {
+            navigate("/explore")
+          }}>Learn More</button>
           </div>
         </div>
       </div>

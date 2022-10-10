@@ -45,7 +45,7 @@ const ExploreMore = () => {
               </p>
             </div>
             <div className="right">
-              <img src={logo} height="200px" alt="" />
+              <img src={logo} height="100vh" alt="" />
             </div>
             </div>
           </div>

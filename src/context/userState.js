@@ -60,6 +60,32 @@ const UserState = (props) => {
     }
   };
 
+  const logout = async () => {
+    await provider
+      .send("eth_requestAccounts", [])
+      .then((res) => {
+        setIsConnected(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    console.log("doing this now..");
+
+    if (signer != null) {
+      await signer
+        .getAddress()
+        .then((res) => {
+          console.log(res);
+          setUserAccount(res);
+          setIsConnected(false);
+        })
+        .catch((err) => {
+          setIsConnected(true);
+        });
+    }
+  };
   return (
     <UserContext.Provider
       value={{

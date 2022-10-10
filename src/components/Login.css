@@ -69,18 +69,12 @@ hr{
     width: 100%;
     padding: 13px 10px;
     border-radius: 5px;
-    /* background-color: black; */
     font-size: 20px;
     border: none;
     cursor: pointer;
     background-color: transparent;
-    /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
-    /* color: black  ; */
     color: white;
-
     font-weight: 700;
-
-    /* margin-right: 00px; */
 }
 
 .clubButton button{
@@ -100,11 +94,7 @@ hr{
 
 }
 
-.clubButton{
-  /* margin-left: 450px; */
-
-
-}
+ 
 
 .login_nav .connect_button button{
     width: 100%;
@@ -129,60 +119,21 @@ hr{
 
 
 .main_login_page{
-    /* border: 2px  solid; */
-    height: 60vh;
-    margin: auto;
-    /* width: 80vh; */
-    margin-top: 50px;
+    /* border: 2px  solid red; */
+    margin-top: 20vh;
     border-radius: 20px;
-    /* background-color: rgb(170,219,30) !important; */
-    /* background-color:	floralwhite; */
+    padding: 5vh;
 }
-.main_login_page .login_box .mainheading{
-    font-size: 33px;
-    margin-top: 100px;
-    width: 160vh;
-    text-transform: capitalize;
-    text-align: center;
-    /* border: 2px  solid; */
-    padding: 20px 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-    /* height: 100px; */
-    border-radius: 12px;
-    border: none;
-    /* opacity: 0.9; */
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    /* font-family: fac; */
-    /* text-align: justify; */
-    
-    
 
-    
-    
-    
-
-}
 .mainheading h4{
-    /* background: -webkit-linear-gradient(#00467f,#a5cc82); */
-/*     
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: white;
   font-weight: 900;
-  font-size: 25px;
-
-}
-
-.main_login_page .login_box{
-    display: flex;
-    flex-direction:column ;
-    justify-content: center;
-    align-items: center;
+  font-size: 2rem;
+  text-align: center;
 }
 .login_box .logo{
     width: 200px;
     height: 150px;
-    /* border: 2px solid; */
     margin-top: 30px;
 
 }
@@ -241,23 +192,23 @@ hr{
 
   .image{
       /* border: 2px solid; */
-      margin-top: -20px;
-      margin-bottom: 50px;
+      /* margin-top: -10vh; */
+      margin-bottom:10vh ;
 
     }
-  .image .img{
+  .image .img1{
     margin: auto;
-   height: 300px; 
-   width: 400px; 
+   height:80vh; 
+   width: 50vw; 
 
     /* height: 100px;
     width: 100px; */
   }
 
-  .img img{
+  .img1 img{
     height: 100%;
     width:100% ;
-    border-radius:50% ;
+    border-radius:5% ;
   }
 
 
@@ -270,20 +221,23 @@ hr{
 
   .built_on{
     text-align: center;
-    margin-top: 60px;
+    /* margin-top: 60px auto; */
+    margin: 10vh auto;
     position: relative;
     color: rgb(82, 78, 78);
     font-size: medium;
-    
+    /* border: 2px solid red; */
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .built_on img{
     height: 30px;
-    position: absolute;
-    top: -5px;
-    right: 460px;
-    /* right: inherit; */
     cursor: pointer;
+    margin-left: 3vw;
+
 
   }
 
@@ -345,27 +299,26 @@ hr{
 
 
   .whyUseWeb3{
-    /* margin-top: 100px; */
+    width: 100%;
   }
   .whyUseWeb3 .heading{
     color: white;
-    padding: 50px 40px;
-    font-size: 40px;
-    margin: 20px auto;
+    padding: 10vh 20vw;
+    font-size: 2.3rem;
+    margin: 0px auto;
     width: fit-content;
   }
 
   .contents{
-    margin-top: 100px;
-
+    margin-top: 8vh;
     color: white;
     /* border: 2px solid red; */
     display: flex;
-    padding: 40px 20px;
+    padding: 20vh 1vw;
 
   }
   .box1 , .box2 , .box3{
-    margin: 10px ;
+    margin: 2vh 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,23 +326,27 @@ hr{
   .contents .text p {
     color: white;
     /* border: 2px solid red; */
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
 
 
   }
 
   .box2{
-    margin-top: -100px;
+    margin-top: -15vh;
   }
 
   .contents .image img{
-    width: 380px;
-    height: 250px;
+    width: 30vw;
+    height: 40vh;
     border-radius: 50%;
 
   }
 
+  .howToGetStarted{
+    /* border: 2px solid red; */
+    margin-top: 5vh;
+  }
 
   
   .instructions .image {
@@ -412,7 +369,7 @@ hr{
   .instructions .text{
     /* border: 2px solid red; */
     text-align: center;
-    width: 500px;
+    width: 35vw;
     /* margin: auto; */
     font-weight: 700;
   }
@@ -420,14 +377,15 @@ hr{
     text-align: start;
   }
   .inst2 .text p{
-    margin-left: 250px;
+    margin-left: 16vw;
+
 
   }
   .inst3 .text p{
-    margin-left: 60px;
+    margin-left: 7vw;
   }
   .inst1 , .inst3{
-    margin-left: 40vh;
+    margin-left: 20vw;
 
   }
 
@@ -452,7 +410,6 @@ hr{
     position: relative;
     z-index: 1;
     height: 70vh;
-
     color: white;
 
   }
@@ -460,7 +417,8 @@ hr{
     margin: auto;
     width: fit-content;
     z-index: 2;
-    font-size: 30px;
+    font-size: 2em;
+    text-align: center;
   }
 
   .extra .subheading{
@@ -472,7 +430,7 @@ hr{
 
   .extra .buttons {
   
-    margin: 100px auto;
+    margin: 10vh auto;
     display: flex;
     justify-content: space-around;
 
@@ -480,15 +438,18 @@ hr{
   }
 
   .buttons button{
-    padding: 20px 40px;
-    margin: 20px ;
+    padding:3vh 2vw;
+    margin: 7vh ;
     cursor: pointer;
     background-color: #1B3E5A;
     color: white;
     border: none;
     border-radius: 23px;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 1rem;
+  }
+  .buttons button:hover{
+    background-color: rgb(13, 13, 97);
   }
 
   .extra .background{
@@ -508,34 +469,35 @@ hr{
 
   /* Explore More Css */
   .explore{
-    margin-top: 110px;
+    margin-top: 15vh;
     border: 2px solid transparent;
-    /* height: 100vh; */
     background:url("../Images/BackGroundImage.png") ;
-    /* margin-bottom: 20px; */
   }
 
   .explore .inner{
-    /* border: 2px solid red; */
-    height: 150vh;
     width: 95%;
-    margin: 50px auto;
+    margin: 10vh auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* opacity: 20%; */
     background-color: rgb(36, 36, 76);
     border-radius: 23px;
   }
 
   .inner h2{
     text-align: center;
-    /* margin-top: 310px; */
-    padding-top: 20px;
-    font-size: 60px;
+    padding-top: 10vh;
+    font-size: 4em;
     color: rgb(115, 88, 212);
 
   }
   .inner .content p{
     color: whitesmoke;
-    padding: 50px 50px;
+    padding: 8vh 5vw;
 
   }
+
+
+  .outerbody_first_container{
+    margin-top: 18vh;
+    /* padding-top: -30vh !important; */
+  }  
+  

@@ -69,7 +69,19 @@ const Navbar = () => {
             }}
           >
             {user.isConnected ? shortAccount() : "Connect"}
-          </button>
+          </button>          
+
+          <button
+            onClick={() => {
+              if (user.isConnected) {
+                navigate("/profile");
+              } else {
+                user.logout();
+              }
+            }}
+          >
+            {user.isConnected ? "Disconnect" : ""}
+          </button>  
         </div>
       </div>
     </>

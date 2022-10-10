@@ -7,18 +7,12 @@ const Footer = () => {
       style={{
         background: "black",
         color: "white",
-        // paddingTop: "80px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // height:"70px",
-        // position:"fixed",
-        // bottom:"10px"
-
-
       }}
     >
-      <div className="copyright" style={{ padding: "30px" }}>
+      <div className="copyright" style={{ padding: "5vh" }}>
         Copyright © 2022 Beyond Imagination Technologies Pvt. Ltd. All right
         reserved.
       </div>

@@ -115,7 +115,7 @@ const Profile = () => {
                 <div className="option" key={post.content}>
                   {post.content}
                 </div>
-              );
+              );  
             })}
           </div>
           <div className="myoptions">
