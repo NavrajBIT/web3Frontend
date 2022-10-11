@@ -185,47 +185,49 @@ const Login = () => {
           </div>
           <div className="instructions">
             <div className="inst1">
-              <div className="image">
-                <img height="250px" width="300px"  style={{
+              <div className="inst_images">
+                <div className="inst1_image_container">
+                <img  className="image1"  style={{
                   borderRadius:"50%"
                 }} src={inst1image} alt="" />
-                <img style={{
-                  marginRight:"300px",
-                  marginTop:"50px"
-                }} height="150px" width="300px"  src={arrow1} alt="" />
-              </div>
-              <div className="text">
+                <div className="text">
                 <p>Create And Connect Metamask Account</p>
               </div>
+                </div>
+                <img  className="arrow" id="arrow1" src={arrow1} alt="" />
+              </div>
+              
             </div>
 
 
             <div className="inst2">
-              <div className="image">
-                <img height="250px" width="300px" style={{
+              <div className="inst_images">
+              <div className="inst1_image_container">
+                <img className="image2" style={{
                   borderRadius:"50%"
-                }} src={inst2image} alt="" />
+                }} src={inst2image} alt="" /> 
+                <div className="text">
+                  <p>Join Or Create A Club</p>
+                </div>
               </div>
-              <div className="text">
-              <p>Join Or Create A Club</p>
               </div>
+              
             </div>
 
 
             <div className="inst3">
-              <div className="image">
-                <img height="250px" width="300px" style={{
+              <div className="inst_images">
+              <div className="inst1_image_container">
+                <img  className="image3" style={{
                   borderRadius:"50%"
                 }} src={inst3image} alt="" />
-                <img style={{
-                  marginRight:"300px",
-                  marginTop:"50px"
-
-                }} height="150px" width="300px" src={arrow2} alt="" />
-              </div>
-              <div className="text">
+                <div className="text">
                 <p>Start Posting</p>
               </div>
+</div>
+                <img  className="arrow" id="arrow2" src={arrow2} alt="" />
+              </div>
+              
             </div>
           </div>
         </div>

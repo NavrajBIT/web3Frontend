@@ -71,7 +71,7 @@ const Navbar = () => {
             {user.isConnected ? shortAccount() : "Connect"}
           </button>          
 
-          <button
+          {/* <button
             onClick={() => {
               if (user.isConnected) {
                 navigate("/profile");
@@ -81,7 +81,7 @@ const Navbar = () => {
             }}
           >
             {user.isConnected ? "Disconnect" : ""}
-          </button>  
+          </button>   */}
         </div>
       </div>
     </>

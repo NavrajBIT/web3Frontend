@@ -15,7 +15,7 @@ const Create = () => {
 
   return (
     <>
-      <div className="outerCreate"></div>
+      <div className="outerCreate">
       <div className="createbox">
         <div className="heading">
           <h2>Create a Club</h2>
@@ -98,6 +98,8 @@ const Create = () => {
           </form>
         </div>
       </div>
+      </div>
+
     </>
   );
 };

@@ -3,33 +3,34 @@
   padding-top: 115px;
 
   height: 100%;
-
   background: url("../../Images/createPage.png");
   background-repeat: no-repeat;
-
+  /* width: 100%; */
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
 }
 
 .club_info {
-  width: 180vh;
-  margin: 10px auto;
-  padding: 30px 100px;
+  /* width: 98vw; */
+  padding: 7vh 8vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .categories_heading {
-  padding: 0px 30px;
+  padding: 0px 1vw;
+  /* border: 2px solid red; */
+  /* flex: 50%; */
+  /* width: 20vw; */
 }
 .category_list ul li {
   list-style: none;
-  margin: 10px 10px;
-  font-size: 15px;
+  margin: 5vh 0vw;
+  font-size: 1em;
   font-weight: 700;
   cursor: pointer;
-
-  width: 200px;
+/* border: 2px solid red; */
+  /* width: 17vw; */
   padding: 10px 30px;
   color: white;
 }
@@ -39,40 +40,40 @@
 }
 
 .categories_heading .heading {
-  font-size: 22px;
+  font-size: 1.5em;
   color: white;
 }
 
-.categories_information {
-  width: 150vh;
-  margin-left: 30px;
-}
 
 .information_box {
-  min-height: 200px;
-  width: 110vh;
+  /* height:55vh; */
+  width: 50vw;
   display: flex;
-  padding: 20px 30px;
+  padding: 5vh 2vw;
   background-color: white;
-  margin: 10px;
+  /* border: 2px solid red; */
+  /* justify-content: space-around; */
+  margin: 2vh 0px;
 }
 
 .information_box .image_container img {
-  height: 80px;
-  width: 130px;
+  height: 17vh;
+  width:  10vw;
   margin-top: 10px;
 }
 
 .information_box .content_information {
-  margin-left: 50px;
+  margin-left: 1vw;
+  /* border: 2px solid red; */
 }
 
 .content_information .heading {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  /* margin-bottom: 10px; */
 }
 
 .content_information .members {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 1rem;
 }
+/*  */

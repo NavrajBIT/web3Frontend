@@ -83,16 +83,16 @@
   margin: 1vh 5vh;
   /* padding: 0px 0px; */
 
+
 }
 
 .options {
-  display: grid;
-  align-items: left;
-  grid-template-columns: 1fr 1fr;
-  justify-content: flex-start;
-  gap: 50vw;
+  display: flex;
+  justify-content: space-between;
   color: white;
    margin: auto;
+   /* border: 2px solid rebeccapurple; */
+   width: 90vw;
 }
 
 .option button{
@@ -123,7 +123,7 @@
   font-weight: 900;
   border-radius: 23px;
   cursor: pointer;
-  width: 40vh;
+  width: 20vw;
 
 
 }

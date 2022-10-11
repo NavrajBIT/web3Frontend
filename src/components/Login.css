@@ -5,7 +5,8 @@
 }
 
 .outerbody{
-    background: url("../Images/BackGroundImage.png");
+    /* background: url("../Images/BackGroundImage.png"); */
+    background-color: rgba(16,1,58,255);
     
 }
 hr{
@@ -120,15 +121,17 @@ hr{
 
 .main_login_page{
     /* border: 2px  solid red; */
-    margin-top: 20vh;
     border-radius: 20px;
     padding: 5vh;
-}
+    width: 80vw;
+    margin:auto;
+    margin-top: 20vh;
+  }
 
 .mainheading h4{
   color: white;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .login_box .logo{
@@ -225,9 +228,9 @@ hr{
     margin: 10vh auto;
     position: relative;
     color: rgb(82, 78, 78);
-    font-size: medium;
+    font-size:1rem ;
     /* border: 2px solid red; */
-    width: 40vw;
+    /* width: 40vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,15 +288,16 @@ hr{
   }
 
   .aboutWeb3Club .text{
-    width: 150vh;
+    width: 80vw;
     margin: auto;
-
+    font-weight: 800;
   }
   .text p{
     width: fit-content;
-      /* font-style: italic; */
-      text-align: center;
-      line-height: 30px;
+    /* font-style: italic; */
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2rem;
 
   }
 
@@ -329,7 +333,6 @@ hr{
     font-size: 1.1em;
     font-weight: 700;
 
-
   }
 
   .box2{
@@ -343,19 +346,21 @@ hr{
 
   }
 
+
   .howToGetStarted{
-    /* border: 2px solid red; */
-    margin-top: 5vh;
+    margin-bottom: 20vh;
   }
 
   
-  .instructions .image {
+  .instructions .inst_images {
     display: flex;
-    justify-content: space-between;
-     
-    /* border-radius: 50%; */
-    
+    justify-content: space-around;
   }
+
+.image1 , .image2 , .image3{
+  height:40vh;
+  width: 30vw;
+}
   
   .inst1  , .inst2 , .inst3{
     display: flex;
@@ -366,44 +371,46 @@ hr{
     padding: 30px 10px;
 
   }
-  .instructions .text{
-    /* border: 2px solid red; */
-    text-align: center;
-    width: 35vw;
-    /* margin: auto; */
-    font-weight: 700;
-  }
-  .inst1 .text{
-    text-align: start;
-  }
-  .inst2 .text p{
-    margin-left: 16vw;
 
+.inst1_image_container{
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 800;
+}
 
-  }
-  .inst3 .text p{
-    margin-left: 7vw;
-  }
-  .inst1 , .inst3{
-    margin-left: 20vw;
+.inst1_image_container div{
+  margin-top: 3vh;
+}
 
-  }
+.inst1_image_container .text p{
+  font-size: 1.2rem;
+}
+
+.arrow{
+  height: 30vh;
+  width: 20vw;
+  margin-top: 10vh;
+}
+
+ 
 
   .inst2{
     align-items: flex-end;
-    margin-right: 40vh;
+
   }
   
 
   .howToGetStarted .heading{
-    /* border: 2px solid red; */
     width: fit-content;
     margin: 50px auto;
 
   }
   .howToGetStarted .heading h4{
-    font-size: 40px;
+    font-size: 2.3rem;
     color: white;
+    text-align: center;
   }
 
   .extra{
@@ -417,7 +424,7 @@ hr{
     margin: auto;
     width: fit-content;
     z-index: 2;
-    font-size: 2em;
+    font-size: 1.1em;
     text-align: center;
   }
 
@@ -425,6 +432,7 @@ hr{
     width: fit-content;
     margin: auto;
     font-weight: 800;
+    font-size: 0.9rem;
     
   }
 
@@ -500,4 +508,85 @@ hr{
     margin-top: 18vh;
     /* padding-top: -30vh !important; */
   }  
+
+
+  /* Footer Code Starts Here and  */
+
+  .footer_bg{
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .copyright{
+        padding: 5vh;
+        font-size: 1rem;
+  }
+  /* Footer Code Ends Here  */
+
   
+
+  /* media queries starts from here : - : - */
+  @media (min-width: 300px) and (max-width: 480px){
+   
+    .contents{
+      margin-top: 8vh;
+    color: white;
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 20vh 1vw;
+    flex-direction: column;
+
+    }
+
+    .box1 , .box2 , .box3{
+      margin: 2vh 1vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .inst1  , .inst2 , .inst3{
+      display: flex;
+      color: white;
+      flex-direction: row;
+      margin: 10px 10px;
+      padding: 30px 10px;
+      justify-content: center;
+      
+    }
+    .inst_images{
+      flex-direction: column;
+      align-items: center;
+    }
+    .arrow{
+      display: none;
+    }
+    .extra .heading{
+      
+      font-size: 1rem;
+          }
+  
+    .extra .subheading{
+      font-size: 0.7rem;
+      
+    } 
+    .buttons{
+      /* border: 2px solid red; */
+      flex-direction: column;
+      /* margin: 2px 2px; */
+    }
+    
+    .buttons button{
+      font-size: 0.6rem;
+      margin: 2vh auto;
+      padding: 2vh 0.3vw;
+      width: 50vw;
+    }
+    .copyright{
+      font-size: 0.6rem;
+}
+    
+  }
