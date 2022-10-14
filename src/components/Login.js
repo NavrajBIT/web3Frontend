@@ -40,39 +40,21 @@ const Login = () => {
     window.scrollTo({ 
       top: document.documentElement.scrollHeight, 
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour 
-         in place of 'smooth' */
     }); 
   }; 
 
 
-  const [clicked, setClicked] = useState(false);
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-  };
+ 
 
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-  };
-  const text = "Connect Wallet";
+ 
+
   return (
     <>
       <div className="outerbody">
 
       <div className="outerbody_first_container">
 
-        {/* <motion.div
-          className="progress-bar"
-          style={{ scaleX: scrollYProgress }}
-        /> */}
-
+     
         <div className="main_login_page">
             <motion.div
               className="mainheading"
@@ -87,7 +69,6 @@ const Login = () => {
               </h4>
             </motion.div>
 
-          {/* <hr width="1000vh" /> */}
           <div className="built_on">
             <h3>Built On - Polygon Network</h3>
             <img src={img2} alt="" />

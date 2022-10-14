@@ -13,24 +13,23 @@
 
 .club_info {
   /* width: 98vw; */
-  padding: 7vh 8vw;
+  /* border: 2px solid red; */
+  margin-top: 20vh;
+  padding: 5vh 5vw;
   display: flex;
   justify-content: space-between;
 }
 .categories_heading {
   padding: 0px 1vw;
-  /* border: 2px solid red; */
-  /* flex: 50%; */
-  /* width: 20vw; */
 }
 .category_list ul li {
   list-style: none;
   margin: 5vh 0vw;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 700;
   cursor: pointer;
 /* border: 2px solid red; */
-  /* width: 17vw; */
+  /* width: fit-content;  */
   padding: 10px 30px;
   color: white;
 }
@@ -40,7 +39,7 @@
 }
 
 .categories_heading .heading {
-  font-size: 1.5em;
+  font-size: 1em;
   color: white;
 }
 
@@ -52,8 +51,10 @@
   padding: 5vh 2vw;
   background-color: white;
   /* border: 2px solid red; */
-  /* justify-content: space-around; */
+  align-items: center;
   margin: 2vh 0px;
+  /* border: 2px solid lime; */
+  /* flex-direction: column; */
 }
 
 .information_box .image_container img {
@@ -65,6 +66,13 @@
 .information_box .content_information {
   margin-left: 1vw;
   /* border: 2px solid red; */
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  
+  
 }
 
 .content_information .heading {
@@ -77,3 +85,51 @@
   font-size: 1rem;
 }
 /*  */
+
+.more_categories{
+  display: none;
+}
+
+/* Media query starts here  */
+
+@media (min-width: 300px) and (max-width: 480px){
+  .information_box{
+    width: auto;
+    flex-direction: column;
+  }
+  
+  .category_list{
+    border: 2px solid purple;
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  .club_info{
+    /* border: 2px solid limegreen; */
+    flex-direction: column;
+  }
+  .more_categories{
+    display: block;
+    padding: 2vh 5vw ;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 2vh auto;
+
+  }
+  .increase_height{
+    height:  100%;
+  }
+
+  .information_box .image_container img{
+    width: 50vw;
+    height: 25vh;
+  }
+  .categories_information{
+    /* border: 2px solid rebeccapurple; */
+    overflow: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 1vh 3vw;
+
+  }
+}

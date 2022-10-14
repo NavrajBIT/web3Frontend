@@ -5,10 +5,17 @@ import Infocards from "./Infocards";
 
 import dummydata from "./dummydata";
 import ClubsScript from "./ClubsScript";
+import { useState } from "react";
 
 const Clubs = () => {
-  const { status, setStatus, clubData, clubsNumberData, filter, setFilter } =
-    ClubsScript();
+  const { status, setStatus, clubData, clubsNumberData, filter, setFilter } = ClubsScript();
+  const [more , setMore] = useState("More");
+
+    const showMoreCategories = () => {
+      const showMore = document.getElementById("more");
+      showMore.classList.toggle("increase_height");    
+      setMore("Less")  ;
+    }
   return (
     <>
       <div className="club_box">
@@ -17,14 +24,14 @@ const Clubs = () => {
             <div className="heading">
               <h2>CATEGORIES</h2>
             </div>
-            <div className="category_list">
+            <div className="category_list" id="more">
               <ul>
                 <li
                   onClick={() => {
                     setFilter("");
                   }}
                 >
-                  All
+                   All
                 </li>
                 <li
                   onClick={() => {
@@ -127,6 +134,10 @@ const Clubs = () => {
                 </li>
               </ul>
             </div>
+            <button onClick={() => {
+                showMoreCategories();
+            } }   className="more_categories" >{more}</button>
+
           </div>
 
           <div className="categories_information">

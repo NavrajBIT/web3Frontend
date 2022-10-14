@@ -73,7 +73,9 @@
     font-weight: bold;
     cursor: pointer;
     transition: transform .2s ease-out;
-    margin-left: -20px;
+      margin-left: -20px;
+
+    /* font-size: 1rem; */
 
   }
 
@@ -118,3 +120,31 @@
   /* For Select MEnu */
   
   /* for select Menu */
+
+
+
+  @media (min-width: 300px) and (max-width: 480px){
+    .outerCreate{
+      margin-top: 40vh;
+    }
+    .createbox .heading h2{
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+    .createbox .heading {
+      padding: 0 3vw;
+    }
+    .file-input{
+      font-size: 0.7rem;
+      font-weight: 900;
+    }
+    .clubDescription textarea{
+      height: 30vh;
+    }
+
+    .category select {
+      width: 40vw;
+      font-size: 0.8rem;
+      padding: 2px;
+    }
+  }

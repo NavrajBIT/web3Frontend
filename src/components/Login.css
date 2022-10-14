@@ -18,72 +18,78 @@ hr{
 }
 
 .login_nav{
+  background-color: rgba(16,1,58,255);
     
-    background: url("../Images/BackGroundImage.png");
+    /* background: url("../Images/BackGroundImage.png"); */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */ 
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0%;
     color: white;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     /* background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%); */
+    /* justify-content: center;  */
+    align-items: center;
+    /* padding-top: 5vh; */
+    padding: 5vh 7vw;
 
 }
 
-.gradient{
-    width: 160vh;
-    height: 100px;
-    margin: auto;
-    border-bottom-left-radius: 50%;
-    /* background-image: -webkit-linear-gradient( top , red 12%, red 5%, transparent 50%, transparent 150%) ; */
-    /* border-bottom-right-radius: 50%; */
-    border: none ;
-    /* background: url('https://www.myweb3.club/static/media/background.a01ee447.png'); */
-    background-size: cover;
-    opacity: 0.6;
-
+.nav_buttons{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
 
 }
+.nav_buttons button{
+  margin: 1vw ;
+  
+}
+
 
 .login_nav .connect_button{
     /* border: 2px solid red; */
-    width: 200px;
-    margin-right: 80px;
+    /* width: 15vw; */
+    /* margin-right: 80px; */
     color: white;
+    font-size: 2rem;
 }
 
 .login_nav .logo{
-    height: 90px;
-    width: 200px;
-    margin-left: 50px;
-    margin-top: 20px;
+    height: 15vh;
+    width: 16vw;
+    /* margin-left: 50px;
+    margin-top: 20px; */
 }
 .createButton{
-  margin-left: 450px;
+  /* margin-left: 30vw; */
   color: white;
 
 }
 
 .createButton  button{
-    width: 100%;
+    /* width: 100%; */
     padding: 13px 10px;
     border-radius: 5px;
-    font-size: 20px;
+    /* font-size: 20px; */
     border: none;
     cursor: pointer;
     background-color: transparent;
     color: white;
     font-weight: 700;
+    font-size: 1.1rem;
+
 }
 
 .clubButton button{
-  width: 100%;
+  /* width: 100%; */
   padding: 13px 10px;
   border-radius: 5px;
   /* background-color: black; */
-  font-size: 20px;
+  font-size: 1.1rem;
+
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -98,17 +104,19 @@ hr{
  
 
 .login_nav .connect_button button{
-    width: 100%;
+    /* width: 100%; */
     padding: 13px 10px;
     border-radius: 5px;
     background-color: #1B3E5A;
-    font-size: 18px;
+    font-size: 1.1rem;
+
     border: none;
     cursor: pointer;
     /* background-color: beige; */
     /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
     color: white;
     font-weight: 700;
+    width: max-content;
 
 }
 
@@ -137,7 +145,7 @@ hr{
 .login_box .logo{
     width: 200px;
     height: 150px;
-    margin-top: 30px;
+
 
 }
 .login_box .connect_button{
@@ -587,6 +595,23 @@ hr{
     }
     .copyright{
       font-size: 0.6rem;
+    }
+
+    /* Nav bar media queries */
+
+    .login_nav img{
+      width: 30vw;
+      
+    }
+    .login_nav button{
+      font-size: 0.8rem;
+    }
+    .nav_buttons{
+      display: block;
+      text-align: right;
+      /* display: none; */
+    }
+    /* Nav bar media queries */
+
+
 }
-    
-  }

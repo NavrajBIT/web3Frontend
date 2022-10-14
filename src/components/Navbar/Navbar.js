@@ -11,12 +11,21 @@ const Navbar = () => {
   const navigate = useNavigate();
   const user = useContext(UserContext);
 
+  const [media , setMedia] = useState(true);
+
   const shortAccount = () => {
     let accountLength = user.userAccount.length;
     let firstPart = user.userAccount.slice(0, 5);
     let lastPart = user.userAccount.slice(accountLength - 5, accountLength - 1);
     return firstPart + "..." + lastPart;
   };
+
+
+  var x = window.matchMedia("(max-width: 480px)")
+  if(x){
+    
+  }
+
 
   return (
     <>
@@ -30,6 +39,11 @@ const Navbar = () => {
             alt="Beyong Imagination Technologies"
           />
         </div>
+
+        <div className="nav_buttons">
+{/* {
+  media ? <> */}
+
 
         {user.isConnected && (
           <>
@@ -69,20 +83,19 @@ const Navbar = () => {
             }}
           >
             {user.isConnected ? shortAccount() : "Connect"}
-          </button>          
-
-          {/* <button
-            onClick={() => {
-              if (user.isConnected) {
-                navigate("/profile");
-              } else {
-                user.logout();
-              }
-            }}
-          >
-            {user.isConnected ? "Disconnect" : ""}
-          </button>   */}
+          </button>         
         </div>
+
+  {/* </> : <>
+    <div>
+        <button></button>
+    </div>
+  </>
+        
+      } */}
+
+        </div>
+
       </div>
     </>
   );
