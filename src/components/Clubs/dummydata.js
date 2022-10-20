@@ -44,6 +44,22 @@ const dummydata = [
         ],
         members:'5'
     }
+    
+    ,
+    {
+        id:6,
+        heading:'Heading 5',
+        about : [
+            "Invest ",
+            "Metaverse"
+        ],
+        members:'5'
+    }
+    
+    
+
+    
 ]
+
 
 export default dummydata;

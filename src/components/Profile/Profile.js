@@ -3,9 +3,14 @@ import "./Profile.css";
 import profile_pic from "../../Images/profile.jpg";
 import ProfileScript from "./ProfileScript";
 import { useNavigate } from "react-router-dom";
+import ClubsScript from "../Clubs/ClubsScript";
+import { useState } from "react";
+import MyPostData from "./MyPostData";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const {clubData} = ClubsScript();
+  const [data , setData] = useState(clubData.slice(0,3));
   const {
     status,
     userName,
@@ -108,19 +113,32 @@ const Profile = () => {
 
       <div className="more_info">
         <div className="options">
-          <div className="myoptions">
+          <div className="myoptions1">
             <button>My Posts</button>
-            {myposts.map((post) => {
+            {/* {myposts.map((post) => {
               return (
                 <div className="option" key={post.content}>
                   {post.content}
                 </div>
+                
               );  
-            })}
+              
+            })} */}
+            <div className="my_post_data">
+                {data.map((d) => {
+                  return (
+                    <>
+                      <MyPostData name={d.name} description={d.description} category={d.category} members={d.members} profilepic={d.profilepic} />
+                    </>
+                  )
+                })}
+            </div>
+
+            
           </div>
-          <div className="myoptions">
+          <div className="myoptions2">
             <button>My Clubs</button>
-            {myClubs.map((club) => {
+            {/* {myClubs.map((club) => {
               return (
                 <div
                   className="option"
@@ -132,7 +150,18 @@ const Profile = () => {
                   {club.name}
                 </div>
               );
-            })}
+            })} */}
+            <div className="my_club_data">
+              <div className="club_card">
+                <ul>
+                  <li>Web 3</li>
+                  <li>Metaverse</li>
+                  <li>DeFi</li>
+                  <li>Blockchain</li>
+                  <li>Bitcoin</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

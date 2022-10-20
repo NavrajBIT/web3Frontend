@@ -4,24 +4,20 @@
     background-repeat: no-repeat;
     background-position: 100% ;
     background-size: cover;
-    width: 100%;
-}
-.status{
-  color: white;
-  font-weight: 900;
+    background-color: #082943;
 
-
+    /* width: 100%; */
 }
+ 
 .createbox{
     border: 2px solid #1d3e58;
     border-radius: 23px;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
-    margin: 30vh auto;
+    margin: 10vh auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width:80vw;
-
     background-color: #082943;
     background: transparent;
 
@@ -124,9 +120,6 @@
 
 
   @media (min-width: 300px) and (max-width: 480px){
-    .outerCreate{
-      margin-top: 40vh;
-    }
     .createbox .heading h2{
       font-size: 1.5rem;
       font-weight: 900;
@@ -134,10 +127,7 @@
     .createbox .heading {
       padding: 0 3vw;
     }
-    .file-input{
-      font-size: 0.7rem;
-      font-weight: 900;
-    }
+    
     .clubDescription textarea{
       height: 30vh;
     }
@@ -146,5 +136,11 @@
       width: 40vw;
       font-size: 0.8rem;
       padding: 2px;
+    }
+    
+    .file-input label{
+      text-align: center;
+      font-size: 0.6rem;
+
     }
   }

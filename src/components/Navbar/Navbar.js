@@ -7,11 +7,32 @@ import { useNavigate } from "react-router";
 import { useState, useContext } from "react";
 import UserContext from "../../context/UserContext";
 
+import { GoThreeBars } from "react-icons/go";
+import { useEffect } from "react";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const user = useContext(UserContext);
 
-  const [media , setMedia] = useState(true);
+  // manipulation by dom elements
+  const button = document.getElementById("menuButton");
+
+  // const [navBtn , setNavBtn] = useState()
+  // manipulation by dom elements
+
+  const [clicked, setClicked] = useState(false);
+
+  const showMenu = (e) => {
+    e.preventDefault();
+    setClicked(!clicked);
+  };
+
+  // useEffect(() => {
+  //   var navButtons = document.getElementById("navButtons");
+  //   navButtons.style.display = "flex"
+  //  }, [])
+
+  const [media, setMedia] = useState(true);
 
   const shortAccount = () => {
     let accountLength = user.userAccount.length;
@@ -21,32 +42,35 @@ const Navbar = () => {
   };
 
 
-  var x = window.matchMedia("(max-width: 480px)")
-  if(x){
-    
+  //if connected and in small screen
+
+  const NotConnected = () => {
+    return (
+      <>
+        <div className="not_connected_then">
+              <button
+                onClick={() => {
+                  if (user.isConnected) {
+                    navigate("/profile");
+                  } else {
+                    user.login();
+                  }
+                }}
+              >
+                {user.isConnected ? shortAccount() : "Connect Now"}
+              </button>
+            </div>
+
+      </>
+    )
   }
 
 
-  return (
-    <>
-      <div className="login_nav">
-        <div className="logo">
-          <img
-            onClick={() => {
-              navigate("/");
-            }}
-            src={logo}
-            alt="Beyong Imagination Technologies"
-          />
-        </div>
-
-        <div className="nav_buttons">
-{/* {
-  media ? <> */}
-
-
-        {user.isConnected && (
-          <>
+  const MobileMenu = () => {
+    return (
+      <>
+        {clicked && (
+          <div className="mobile_view_buttons">
             <div className="createButton">
               <button
                 onClick={() => {
@@ -69,10 +93,78 @@ const Navbar = () => {
                 Clubs
               </button>
             </div>
+
+            
+            {user.isConnected == false && (
+              <div className="connect_button mobile_view_connect_button">
+              <button
+                onClick={() => {
+                  if (user.isConnected) {
+                    navigate("/profile");
+                  } else {
+                    user.login();
+                  }
+                }}
+              >
+                {user.isConnected ? shortAccount() : "Connect Now"}
+              </button>
+            </div>
+
+            )}
+
+          </div>
+        )}
+      </>
+    );
+  };
+
+  return (
+    <>
+      <div className="login_nav">
+        <div className="logo">
+          <img
+            onClick={() => {
+              navigate("/");
+            }}
+            src={logo}
+            alt="Beyong Imagination Technologies"
+          />
+        </div>
+
+        {user.isConnected && (
+          <>
+            {/* <h2>simple text</h2> */}
+            {/* <div className="btns"> */}
+              
+            <MobileMenu />
+            <div className="nav_buttons">
+              <div className="createButton">
+                <button
+                  onClick={() => {
+                    if (user.isConnected) {
+                      navigate("/create");
+                    }
+                  }}
+                >
+                  Create
+                </button>
+              </div>
+              <div className="clubButton">
+                <button
+                  onClick={() => {
+                    if (user.isConnected) {
+                      navigate("/clubs");
+                    }
+                  }}
+                >
+                  Clubs
+                </button>
+              </div>
+            </div>
           </>
         )}
 
-        <div className="connect_button">
+        <div className="big_screen_connect_button connect_button ">
           <button
             onClick={() => {
               if (user.isConnected) {
@@ -83,19 +175,14 @@ const Navbar = () => {
             }}
           >
             {user.isConnected ? shortAccount() : "Connect"}
-          </button>         
+          </button>
         </div>
 
-  {/* </> : <>
-    <div>
-        <button></button>
-    </div>
-  </>
         
-      } */}
 
+        <div className="viewOnSmallDevice" id="menuButton" onClick={showMenu}>
+          {!clicked ? <GoThreeBars /> : "X"}
         </div>
-
       </div>
     </>
   );

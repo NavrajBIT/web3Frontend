@@ -9,13 +9,8 @@
     background-color: rgba(16,1,58,255);
     
 }
-hr{
-        margin-left: auto;
-        margin-right: auto;
-        border: 1px solid grey;
-        
+ 
 
-}
 
 .login_nav{
   background-color: rgba(16,1,58,255);
@@ -23,36 +18,72 @@ hr{
     /* background: url("../Images/BackGroundImage.png"); */
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */ 
-    position: fixed;
-    width: 100vw;
-    top: 0%;
+    
     color: white;
-    /* padding-bottom: 10px; */
-    /* background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%); */
-    /* justify-content: center;  */
+  
     align-items: center;
-    /* padding-top: 5vh; */
-    padding: 5vh 7vw;
+    padding: 5vh 5vw;
+
 
 }
 
-.nav_buttons{
-  /* border: 2px solid red; */
-  display: flex;
-  justify-content: space-between;
+ 
 
+.nav_buttons{
+  display: flex;
+  /* justify-content: space-between; */
+  margin-left: 40vw;
+  /* border: 2px solid red; */
+
+}
+.viewOnSmallDevice{
+  display: none;
 }
 .nav_buttons button{
   margin: 1vw ;
   
 }
 
+.mobile_view_buttons{
+  display: none;
+  
+  
+}
+@media  (max-width: 800px){
+  .nav_buttons{
+    display: flex;
+    margin-left: 0vw;
+
+  }
+  
+}
+
+@media (min-width: 300px) and (max-width: 480px){
+  .nav_buttons{
+    display: none;
+
+  }
+  .viewOnSmallDevice{
+    display: block;
+  }
+
+  .mobile_view_buttons{
+    display: block;
+    margin-left: 10vw;
+  }
+  .mobile_view_connect_button{
+    display: none;
+
+  }
+
+  
+
+
+
+}
+
 
 .login_nav .connect_button{
-    /* border: 2px solid red; */
-    /* width: 15vw; */
-    /* margin-right: 80px; */
     color: white;
     font-size: 2rem;
 }
@@ -60,8 +91,6 @@ hr{
 .login_nav .logo{
     height: 15vh;
     width: 16vw;
-    /* margin-left: 50px;
-    margin-top: 20px; */
 }
 .createButton{
   /* margin-left: 30vw; */
@@ -70,10 +99,9 @@ hr{
 }
 
 .createButton  button{
-    /* width: 100%; */
+
     padding: 13px 10px;
     border-radius: 5px;
-    /* font-size: 20px; */
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -109,11 +137,8 @@ hr{
     border-radius: 5px;
     background-color: #1B3E5A;
     font-size: 1.1rem;
-
     border: none;
     cursor: pointer;
-    /* background-color: beige; */
-    /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
     color: white;
     font-weight: 700;
     width: max-content;
@@ -133,7 +158,7 @@ hr{
     padding: 5vh;
     width: 80vw;
     margin:auto;
-    margin-top: 20vh;
+    margin-top: -20vh;
   }
 
 .mainheading h4{
@@ -142,45 +167,8 @@ hr{
   font-size: 1.5rem;
   text-align: center;
 }
-.login_box .logo{
-    width: 200px;
-    height: 150px;
 
-
-}
-.login_box .connect_button{
-    width: 200px;
-    margin-top: 80px;
-
-    /* background: linear-gradient(91.96deg,#4e48f2 17.52%,#7f5ae4 91.27%); */
-}
-.login_box .connect_button button{
-    cursor: pointer;
-    width: 200px;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 4px;
-    margin: 40px auto;
-    color: white;
-    /* font-family: fac; */
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    border: none;
-    font-size: 20px;
-    margin-top: -70px;
-    font-weight: 700;
-    
-        /* background-color: black; */
-
-   
-}
-
-.connect_button button:hover{
-    background-color: 	ivory;
-    /* color: black; */
-    /* font-weight: 700; */
-}
+ 
 
 .logo img{
     height: 100%;
@@ -189,21 +177,7 @@ hr{
 
 
 
-
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background: blueviolet;
-    opacity: 0.5;
-    transform-origin: 0%;
-  }
-
   .image{
-      /* border: 2px solid; */
-      /* margin-top: -10vh; */
       margin-bottom:10vh ;
 
     }
@@ -211,9 +185,7 @@ hr{
     margin: auto;
    height:80vh; 
    width: 50vw; 
-
-    /* height: 100px;
-    width: 100px; */
+ 
   }
 
   .img1 img{
@@ -237,8 +209,6 @@ hr{
     position: relative;
     color: rgb(82, 78, 78);
     font-size:1rem ;
-    /* border: 2px solid red; */
-    /* width: 40vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,8 +218,6 @@ hr{
     height: 30px;
     cursor: pointer;
     margin-left: 3vw;
-
-
   }
 
   .exploreButton{
@@ -273,7 +241,7 @@ hr{
     /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
     color: white;
     font-weight: 700;
-    margin: 0px auto;
+    /* margin: 0px auto; */
     
   }
 
@@ -290,7 +258,7 @@ hr{
 
   }
   .aboutWeb3Club .heading  h3{
-    font-size: 40px;
+    font-size: 2rem;
     width: fit-content;
     margin: auto;
   }
@@ -518,6 +486,8 @@ hr{
   }  
 
 
+
+
   /* Footer Code Starts Here and  */
 
   .footer_bg{
@@ -531,21 +501,32 @@ hr{
         padding: 5vh;
         font-size: 1rem;
   }
+
+ 
   /* Footer Code Ends Here  */
 
   
 
   /* media queries starts from here : - : - */
-  @media (min-width: 300px) and (max-width: 480px){
+  @media (min-width: 300px) and (max-width: 500px){
    
     .contents{
       margin-top: 8vh;
     color: white;
     /* border: 2px solid red; */
     display: flex;
-    padding: 20vh 1vw;
+    padding: 10vh 1vw;
     flex-direction: column;
 
+    }
+
+    .img1 img{
+      height: 50vh;
+      margin: auto;
+    }
+
+    .exploreButton{
+      margin-top: -20vh;
     }
 
     .box1 , .box2 , .box3{
@@ -584,10 +565,10 @@ hr{
     .buttons{
       /* border: 2px solid red; */
       flex-direction: column;
-      /* margin: 2px 2px; */
     }
     
     .buttons button{
+    
       font-size: 0.6rem;
       margin: 2vh auto;
       padding: 2vh 0.3vw;
@@ -597,20 +578,49 @@ hr{
       font-size: 0.6rem;
     }
 
+    
+
+    .whyUseWeb3 .image img{
+      width: 50vw;
+      /* border: 2px solid red; */
+    }
+
+    .howToGetStarted .inst_images img{
+      width: 50vw;
+    }
+
+    .arrow{
+      display: none;
+    }
     /* Nav bar media queries */
 
     .login_nav img{
-      width: 30vw;
+      width: 25vw;
       
     }
-    .login_nav button{
+     
+
+    .login_nav .connect_button button{
+      padding: 4vh 2vw;
+      border-radius: 5px;
+      background-color: #1B3E5A;
       font-size: 0.8rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      width: max-content;
     }
-    .nav_buttons{
-      display: block;
-      text-align: right;
-      /* display: none; */
+
+    .clubButton button {
+      font-size: 0.7rem;
     }
+    .createButton button{
+      font-size: 0.7rem;
+
+    }
+    
+    
     /* Nav bar media queries */
 
 
