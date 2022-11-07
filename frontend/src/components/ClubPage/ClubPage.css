@@ -137,6 +137,18 @@
 }
 
 
+.likeCount{
+  font-weight: bolder;
+  color: black !important;
+  font-size: 2.4rem;
+  margin:  2vh;
+
+}
+
+.like button{
+  cursor: pointer;
+}
+
 @media (min-width: 300px) and (max-width: 480px){
   .clubPic{
     margin: auto;

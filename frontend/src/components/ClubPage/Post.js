@@ -4,13 +4,24 @@ import React, { useState } from "react";
 import "./ClubPage.css";
 import { AiOutlineLike } from "react-icons/ai";
 
-import { PostLike } from "../apiCalls";
+import { createComment } from "../apiCalls";
+// import PostLike from "../apiCalls";
 
 
 const Post = (props) => {
+  // const poppulateLikes = () => {
 
+  // }
+
+
+  // useEffect(() => {
+  //   poppulateLikes();
+  // }, [])
+  
   const [data , setData ] = useState("");
   const [comments , setComments] = useState([data]);
+  const [like ,setLike] = useState(0);
+
 
   return (
     <div className="post">
@@ -26,13 +37,21 @@ const Post = (props) => {
              onChange={(e) => setData(e.target.value) }
           />
           <button
-            onClick={() =>  setComments([...comments , data ])}
+            onClick={() => {
+             setComments([...comments , data ])
+             createComment(props.clubId ,props.postId , props.postedBy , data)
+
+            }
+             }
           >Send</button>
         </div>
          <div className="like"><button  onClick={() => {
                let clubId = props.clubId;
+              //  console.log(getPostLike);
+              //  console.log(clubId);
+               setLike(like + 1);
          }}> 
-            <AiOutlineLike size={30}/>
+            <AiOutlineLike size={30}/> <span className="likeCount">  {like } </span>
          </button> 
          </div>
 

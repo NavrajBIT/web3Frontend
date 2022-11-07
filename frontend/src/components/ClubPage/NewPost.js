@@ -24,6 +24,7 @@ const NewPost = (props) => {
               return;
             }
             let clubId = props.clubId;
+            console.log(clubId)
             let postedBy = user.userAccount;
             createPost(content, clubId, postedBy).then((res) => {
               if (res !== "Server error") {

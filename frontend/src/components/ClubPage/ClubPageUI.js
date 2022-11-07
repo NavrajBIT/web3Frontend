@@ -6,6 +6,7 @@ import Post from "./Post";
 const ClubPageUI = (props) => {
   return (
     <>
+
     <div className="background">
 
       <div className="clubDetails">
@@ -23,8 +24,10 @@ const ClubPageUI = (props) => {
         <NewPost clubId={props.clubData.clubId} />
 
         {props.clubPosts.map((post) => {
-          return <Post content={post.content} postedBy={post.posted_by} />;
+          console.log(post)
+          return <Post content={post.content} postedBy={post.posted_by} clubId={post.club} postId={post.id} />;
         })}
+
       </div>
     </div>
 

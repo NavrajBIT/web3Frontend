@@ -184,6 +184,8 @@ export const getMyClubs = async (account) => {
     });
   return response;
 };
+
+
 export const getMyPosts = async (account) => {
   const endpoint = "getMyPosts";
   const url = BASE_URL + endpoint;
@@ -200,41 +202,57 @@ export const getMyPosts = async (account) => {
 };
 
 
-export const PostLike = async(account , clubId) =>{
-  const endpoint = "PostLike";
-  const url = BASE_URL + endpoint;
-  let formData = new FormData();
-  
-  
-  formData.append("account", account);
-  formData.append("clubId", clubId);
-  
-  const response = await fetch(url, { method: "POST", body: formData })
-  .then((res) => {
-    return res.json();
-  })
-  .catch((err) => {
-    return "Server error";
-  });
-  return response;
-}
+// export const getPostLike = async(account , postId , likes) =>{
+//   const endpoint = "Post/" + postId ;
+//   const url = BASE_URL + endpoint;
+//   let formData = new FormData();
+
+//   const response = await fetch(url, { method: "POST", body: formData })
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .catch((err) => {
+//     return "Server error";
+//   });
+//   return response;
+// }
 
 
 // new code for comments and like 
 
-// export const createCommnet = async (content, clubId, postedBy) => {
-//   const endpoint = "createComment";
-//   const url = BASE_URL + endpoint;
-//   let formData = new FormData();
-//   formData.append("content", content);
-//   formData.append("clubId", clubId);
-//   formData.append("postedBy", postedBy);
-//   const response = await fetch(url, { method: "POST", body: formData })
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .catch((err) => {
-//       return "Server error";
-//     });
-//   return response;
-// };
+export const createComment = async (clubId, postId, commented_by , comment) => {
+  const endpoint = "createComment";
+  const url = BASE_URL + endpoint;
+  let formData = new FormData();
+  formData.append("clubId", clubId);
+  formData.append("postId", postId);
+  formData.append("commented_by", commented_by);
+  formData.append("comment", comment);
+
+  const response = await fetch(url, { method: "POST", body: formData })
+    .then((res) => {
+      return res.json();
+    })
+    .catch((err) => {
+      return "Server error";
+    });
+  return response;
+};
+
+
+export const getPostComments = async (clubId , postId) => {
+  const endpoint = "getPostComments";
+  const url = BASE_URL + endpoint;
+  let formData = new FormData();
+  formData.append("clubId", clubId);
+  formData.append("postId", postId);
+
+  const response = await fetch(url, { method: "POST", body: formData })
+    .then((res) => {
+      return res.json();
+    })
+    .catch((err) => {
+      return "Server error";
+    });
+  return response;
+};
