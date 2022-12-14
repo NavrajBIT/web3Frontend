@@ -2,13 +2,13 @@ import React from "react";
 
 import logo from "../../Images/BITlogo.png";
 
-// import useNavigation from "use-navigation";
+ 
 import { useNavigate } from "react-router";
 import { useState, useContext } from "react";
 import UserContext from "../../context/UserContext";
 
 import { GoThreeBars } from "react-icons/go";
-import { useEffect } from "react";
+ 
 
 const Navbar = () => {
   const navigate = useNavigate();

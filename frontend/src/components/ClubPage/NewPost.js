@@ -11,20 +11,37 @@ const NewPost = (props) => {
   return (
     <div className="newPost">
       <div className="newPostContent">
-        <textarea  placeholder="Enter Your Post Details Here ....." name="newpost" id="newpost" cols="30" rows="10"></textarea>
+        <textarea
+          placeholder="Enter Your Post Details Here ....."
+          name="newpost"
+          id="newpost"
+          cols="30"
+          rows="10"
+        ></textarea>
       </div>
-      <div className="status1">  { status}</div>
+      <div className="status"> {status}</div>
       <div className="postButton">
         <button
           onClick={() => {
-            setStatus("Posting...");
+            // setStatus("Posting...");
+            setStatus(
+              <div className="alert alert-danger" role="alert">
+                Posting..
+              </div>
+            );
+
             let content = document.getElementById("newpost").value;
             if (content === "") {
-              setStatus("Post is empty.");
+              // setStatus("Post is empty.");
+              setStatus(
+                <div className="alert alert-danger" role="alert">
+                  Post is empty.
+                </div>
+              );
               return;
             }
             let clubId = props.clubId;
-            console.log(clubId)
+            console.log(clubId);
             let postedBy = user.userAccount;
             createPost(content, clubId, postedBy).then((res) => {
               if (res !== "Server error") {
@@ -32,10 +49,20 @@ const NewPost = (props) => {
                   setStatus("");
                   window.location.reload();
                 } else {
-                  setStatus("Something went wrong. Please try again.");
+                  // setStatus("Something went wrong. Please try again.");
+                  setStatus(
+                    <div className="alert alert-success" role="alert">
+                      Something went wrong. Please try again.{" "}
+                    </div>
+                  );
                 }
               } else {
-                setStatus("Something went wrong. Please try again.");
+                // setStatus("Something went wrong. Please try again.");
+                setStatus(
+                  <div className="alert alert-success" role="alert">
+                    Something went wrong. Please try again.{" "}
+                  </div>
+                );
               }
             });
           }}

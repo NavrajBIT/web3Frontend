@@ -58,6 +58,8 @@ export const getUserData = async (account) => {
 
   return response;
 };
+
+
 export const editUserData = async (name, account, description, profilepic) => {
   const endpoint = "editUserData";
   const url = BASE_URL + endpoint;
@@ -202,20 +204,7 @@ export const getMyPosts = async (account) => {
 };
 
 
-// export const getPostLike = async(account , postId , likes) =>{
-//   const endpoint = "Post/" + postId ;
-//   const url = BASE_URL + endpoint;
-//   let formData = new FormData();
 
-//   const response = await fetch(url, { method: "POST", body: formData })
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .catch((err) => {
-//     return "Server error";
-//   });
-//   return response;
-// }
 
 
 // new code for comments and like 
@@ -256,3 +245,44 @@ export const getPostComments = async (clubId , postId) => {
     });
   return response;
 };
+
+
+export const PostLike = async (clubId, postId , liked_by) => {
+  const endpoint = "PostLike" ;
+
+  const url = BASE_URL + endpoint;
+  let formData = new FormData();
+
+  formData.append("clubId", clubId);
+  formData.append("postId", postId);
+  formData.append("liked_by", liked_by);
+  
+  const response = await fetch(url, { method: "POST", body: formData })
+    .then((res) => {
+      return res.json();
+    })
+    .catch((err) => {
+      return "Server error";
+    });
+  return response;
+};
+
+
+export const getPostLikes = async( clubId, postId ) =>{
+  const endpoint = "getLikeCounts";
+  const url = BASE_URL + endpoint;
+  let formData = new FormData();
+
+  formData.append("clubId" , clubId);
+  formData.append("postId" , postId);
+
+
+  const response = await fetch(url, { method: "POST", body: formData })
+  .then((res) => {
+    return res.json();
+  })
+  .catch((err) => {
+    return "Server error";
+  });
+  return response;
+}

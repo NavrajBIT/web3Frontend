@@ -69,7 +69,9 @@ export const ProfileScript = () => {
 
   const handleSaveButton = (name, description) => {
     // e.preventDefault();
-    setStatus("Updating profile...");
+    // setStatus("Updating profile...");
+    setStatus(<div className="alert alert-success" role="alert">Updating profile.... </div>)
+
     createUserProfile(name, description, userPicRaw);
   };
 
@@ -82,10 +84,12 @@ export const ProfileScript = () => {
             poppulateUserData();
             setIsEditting(false);
           } else {
-            setStatus("Something went wrong. Please try again.");
+            // setStatus("Something went wrong. Please try again.");
+            setStatus(<div className="alert alert-danger" role="alert">Something went wrong. Please try again.  </div>)
           }
         } else {
-          setStatus("Something went wrong. Please try again.");
+          // setStatus("Something went wrong. Please try again.");
+          setStatus(<div className="alert alert-danger" role="alert">Something went wrong. Please try again.  </div>)
         }
       }
     );

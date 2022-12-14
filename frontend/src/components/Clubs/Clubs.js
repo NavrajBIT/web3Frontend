@@ -1,14 +1,11 @@
 import React from "react";
 import "./Clubs.css";
-import Navbar from "../Navbar/Navbar";
 import Infocards from "./Infocards";
 
-import dummydata from "./dummydata";
 import ClubsScript from "./ClubsScript";
 import { useState } from "react";
 
-import ReactPaginate from "react-paginate";
-import { logDOM } from "@testing-library/react";
+
 
 import Alert from "@mui/material/Alert";
 
@@ -16,21 +13,10 @@ const Clubs = () => {
   const { status, setStatus, clubData, clubsNumberData, filter, setFilter } =
     ClubsScript();
    
-
- 
-
   const [users , setUsers] = useState(clubData);
   const [page, setPageNumber] = useState(0);
   const usersPerPage = 3;
   const pagesVisited = page * usersPerPage;
-
-  const changePage = ({selected : selectedPage}) => {
-    setPageNumber(selectedPage);
-  }
-
-
-
-  
   const MobileViewFilter = () => {
     const [searchValue , setSearchValue ] = useState("");
     return (
@@ -40,8 +26,6 @@ const Clubs = () => {
           <button
            onClick={() => {
              setFilter(searchValue) 
-            //  console.log(searchValue.toLowerCase())
-            
              }}
           >Search</button>
         </div>
@@ -55,22 +39,6 @@ const Clubs = () => {
   const displayUsers = 
   // clubData.map((club, index) => {
   users.slice(pagesVisited , pagesVisited + usersPerPage).map((club, index) => {
-    // if (filter === club.category2.toLowerCase() || filter === "") {
-    // if (filter === club.category || filter === "") {
-    //   return (
-    //     <Infocards
-    //       key={club.name}
-    //       heading={club.name}
-    //       about={club.description}
-    //       members={club.members}
-    //       category={club.category}
-    //       profilepic={club.profilepic}
-    //       id={club.id}
-    //     />
-    //   );
-    // }
-
-
       if (filter === club.category || filter === ""  ) {
         return (
           <Infocards
@@ -86,8 +54,7 @@ const Clubs = () => {
       }
     })
   
-
-    const pageCount  = Math.ceil(users.length / usersPerPage);
+ 
 
   return (
     <>
@@ -231,20 +198,7 @@ const Clubs = () => {
                     );
                   }
                 })}
-                {/* {clubData.length > 0 && displayUsers}   */}
             </div>
-                {/* { 
-                <ReactPaginate
-                  previousLabel="Previous"
-                  nextLabel="Next"
-                  pageCount={pageCount}
-                  onPageChange={changePage}
-                  containerClassName="paginationBttns"
-                  previousLinkClassName="previousBttn"
-                  nextLinkClassName="nextBttn"
-                  activeClassName="paginationActive"
-                 />
-                 } */}
           </div>
  
           <div className="status2" id="st2"> 

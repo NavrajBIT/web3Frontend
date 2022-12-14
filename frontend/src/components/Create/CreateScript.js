@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { checkClubName, createClub } from "../apiCalls";
 import { useState, useContext } from "react";
 import UserContext from "../../context/UserContext";
@@ -15,15 +15,18 @@ export const CreateScript = (props) => {
 
   const handleCreateButton = async (e) => {
     e.preventDefault();
-    setStatus("Checking data...");
+    // setStatus("Checking data...");
+    setStatus(<div className="alert alert-success" role="alert">Checking data......  </div>)
     checkForEmptyFields();
   };
 
   const checkForEmptyFields = () => {
     if (clubName === "") {
-      setStatus("Club name should not be empty");
+      // setStatus("Club name should not be empty");
+      setStatus( <div className="alert alert-danger" role="alert"> Club name should not be empty  </div>)
     } else if (clubDescription === "") {
-      setStatus("Provide a description for your club.");
+      // setStatus("Provide a description for your club.");
+      setStatus(<div className="alert alert-danger" role="alert"> Provide a description for your club.  </div>)
     } else {
       checkforclubname();
     }
@@ -33,13 +36,16 @@ export const CreateScript = (props) => {
     await checkClubName(clubName).then((res) => {
       if (res !== "Server error") {
         if (res.status === "Success") {
-          setStatus("This club already exists. Try with a different name.");
+          // setStatus("This club already exists. Try with a different name.");
+          setStatus(<div className="alert alert-danger" role="alert">This club already exists. Try with a different name.  </div>)
         } else {
-          setStatus("Creating club...");
+          // setStatus("Creating club...");
+          setStatus(<div className="alert alert-success" role="alert">Creating club.....  </div>)
           createmyClub();
         }
       } else {
-        setStatus("Something went wrong. Please try again.");
+        // setStatus("Something went wrong. Please try again.");
+        setStatus(<div className="alert alert-success" role="alert">Something went wrong. Please try again.  </div>)
       }
     });
   };
@@ -55,16 +61,19 @@ export const CreateScript = (props) => {
     ).then((res) => {
       if (res !== "Server error") {
         if (res.status === "Success") {
-          setStatus("Club created successfully. Redirecting to club page...");
+          // setStatus("Club created successfully. Redirecting to club page...");
+          setStatus( <div className="alert alert-success" role="alert">Club created successfully. Redirecting to club page... </div>)
           setTimeout(() => {
             console.log("timeout happened." + "/club/" + res.data.id);
             navigate("/club/" + res.data.id);
           }, 2000);
         } else {
-          setStatus("Something went wrong. Please try again.");
+          // setStatus("Something went wrong. Please try again.");
+          setStatus( <div className="alert alert-success" role="alert">Something went wrong. Please try again.</div>)
         }
       } else {
-        setStatus("Something went wrong. Please try again.");
+        // setStatus("Something went wrong. Please try again.");
+        setStatus(<div className="alert alert-success" role="alert">Something went wrong. Please try again.  </div>)
       }
     });
   };

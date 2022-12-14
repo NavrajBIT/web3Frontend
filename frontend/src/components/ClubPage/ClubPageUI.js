@@ -4,11 +4,11 @@ import NewPost from "./NewPost";
 import Post from "./Post";
 
 const ClubPageUI = (props) => {
+  console.log(props.clubPosts);
   return (
     <>
 
     <div className="background">
-
       <div className="clubDetails">
         <div className="clubPic">
           <img src={props.clubData.clubPic} alt={props.clubData.clubName} />
@@ -19,13 +19,12 @@ const ClubPageUI = (props) => {
           <h5>{props.clubData.clubCategory}</h5>
         </div>
       </div>
-      <div className="status" style={{color:"white" , marginLeft:"50px"}}>{props.status}</div>
+      <div className="status">{props.status}</div>
       <div className="clubPostContainer">
         <NewPost clubId={props.clubData.clubId} />
 
         {props.clubPosts.map((post) => {
-          console.log(post)
-          return <Post content={post.content} postedBy={post.posted_by} clubId={post.club} postId={post.id} />;
+          return <Post content={post.content} postedBy={post.posted_by} clubId={post.club} postId={post.id} clubPostComment={props.clubPostComment} clubPostLikes={props.clubPostLikes} liked_by={post.posted_by} />;
         })}
 
       </div>
