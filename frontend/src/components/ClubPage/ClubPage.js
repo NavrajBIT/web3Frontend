@@ -7,6 +7,7 @@ import {
   getClubPosts,
   getPostComments,
   getPostLikes,
+  
 } from "../apiCalls";
 
 const ClubPage = () => {
@@ -31,13 +32,15 @@ const ClubPage = () => {
 
   useEffect(() => {
     poppulateClubData();
-  }, []);
+  } , []);
+
+
 
   const poppulateClubData = async () => {
     // setStatus("Loading club...");
     setStatus(
       <div className="alert alert-success" role="alert">
-        Loading club......{" "}
+        Loading club...... 
       </div>
     );
 
@@ -59,11 +62,12 @@ const ClubPage = () => {
           poppulateClubPosts();
           poppulatePostComments();
           poppulatePostLikes();
+
         } else {
           // setStatus("Club not found.");
           setStatus(
             <div className="alert alert-danger" role="alert">
-              Club not found{" "}
+              Club not found
             </div>
           );
         }
@@ -71,7 +75,7 @@ const ClubPage = () => {
         // setStatus("Something went wrong. Please refresh.");
         setStatus(
           <div className="alert alert-danger" role="alert">
-            Something went wrong. Please refresh.{" "}
+            Something went wrong. Please refresh.
           </div>
         );
       }
@@ -146,7 +150,7 @@ const ClubPage = () => {
     // setStatus("Loading posts...");
     setStatus(
       <div className="alert alert-success" role="alert">
-        Loading posts......{" "}
+        Loading posts...... 
       </div>
     );
 
@@ -180,7 +184,7 @@ const ClubPage = () => {
     // setStatus("Loading posts...");
     setStatus(
       <div className="alert alert-success" role="alert">
-        Loading posts......{" "}
+        Loading posts...... 
       </div>
     );
 
@@ -222,6 +226,7 @@ const ClubPage = () => {
       clubPostLikes={clubPostLikes}
     />
   );
+
 };
 
 export default ClubPage;

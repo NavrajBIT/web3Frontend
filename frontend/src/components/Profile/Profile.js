@@ -11,6 +11,20 @@ const Profile = () => {
   const navigate = useNavigate();
   const { clubData } = ClubsScript();
 
+  const [dummymyposts , setdummymyposts] = useState([
+    {content : "Metaverse is the future of web3 technology" , postedby :'9wer8qw48e08708w34q23' } ,
+  {content : "Blockchain is the future of web3 technology" , postedby :'9wer8qw48e08708w34q23' },
+  {content : "Crypto is the future of web3 technology" , postedby :'9wer8qw48e08708w34q23' },
+  {content : "Web3 world  is the future of web3 technology" , postedby :'9wer8qw48e08708w34q23' }]
+  )
+  const [dummymyclub , setdummymyclub] = useState([
+    { name : "Metaverse" , id : 1 } ,
+  { name : "Block Chain" , id : 2 },
+  { name : "Web3" , id : 3},
+  { name : "Dapp" , id : 4}
+]
+  )
+
   const {
     status,
     userName,
@@ -118,7 +132,9 @@ const Profile = () => {
               <button>My Posts</button>
 
               <div className="my_post_data">
-                {myposts.map((post) => {
+              {/* conmmenting below  */}
+
+                {/* {myposts.map((post) => {
                   console.log(post);
                   return (
                     <div
@@ -133,12 +149,48 @@ const Profile = () => {
                       />
                     </div>
                   );
-                })}
+                })} */}
+
+              {/* conmmenting above  */}
+              {dummymyposts.map((post) => {
+                  console.log(post);
+                  return (
+                    <div
+                      key={post.id}
+                      onClick={() => {
+                        navigate("/club/" + post.id);
+                      }}
+                    >
+                      <MyPostData
+                        content={post.content}
+                        postedBy={post.postedby}
+                      />
+                    </div>
+                  );
+                })} 
               </div>
             </div>
             <div className="myoptions2">
               <button>My Clubs</button>
-              {myClubs.map((club) => {
+              {/* conmmenting below  */}
+
+              {/* {myClubs.map((club) => {
+                return (
+                  <div
+                    className="option"
+                    key={club.name}
+                    onClick={() => {
+                      navigate("/club/" + club.id);
+                    }}
+                  >
+                    {club.name}
+                  </div>
+                );
+              })} */}
+
+              {/* conmmenting above */}
+
+              {dummymyclub.map((club) => {
                 return (
                   <div
                     className="option"
@@ -151,6 +203,7 @@ const Profile = () => {
                   </div>
                 );
               })}
+
             </div>
           </div>
         </div>

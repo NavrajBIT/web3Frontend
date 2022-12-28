@@ -20,13 +20,14 @@ const Post = (props) => {
       setComments(res.data);
     });
 
-    PostLike(props.clubId, props.postId, props.liked_by);
     getPostLikes(props.clubId, props.postId).then((res) => {
       setLike(res.data);
     });
+    
   }, []);
 
   const [data, setData] = useState("");
+
   const [comments, setComments] = useState([data]);
 
   const [like, setLike] = useState(0);
@@ -61,10 +62,12 @@ const Post = (props) => {
         </div>
         <div className="like">
           <button
-            onClick={() => {
-              PostLike(props.clubId, props.postId, props.liked_by);
-              getPostLikes(props.clubId, props.postId).then((res) => {
+            onClick={async ( ) => {
+              await PostLike(props.clubId, props.postId, props.liked_by);
+
+              await getPostLikes(props.clubId, props.postId).then((res) => {
                 setLike(res.data);
+                // console.log(res)
               });
             }}
           >
@@ -78,7 +81,11 @@ const Post = (props) => {
                 </>
               )
             }) } </span> */}
+            
           </button>
+          <div className="likecount">
+            <p>{like}</p>
+          </div>
         </div>
       </div>
 

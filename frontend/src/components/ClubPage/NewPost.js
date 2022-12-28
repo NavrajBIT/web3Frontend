@@ -19,7 +19,9 @@ const NewPost = (props) => {
           rows="10"
         ></textarea>
       </div>
-      <div className="status"> {status}</div>
+
+      <div className="status">{status}</div>
+      
       <div className="postButton">
         <button
           onClick={() => {
@@ -31,6 +33,7 @@ const NewPost = (props) => {
             );
 
             let content = document.getElementById("newpost").value;
+            
             if (content === "") {
               // setStatus("Post is empty.");
               setStatus(
@@ -52,7 +55,7 @@ const NewPost = (props) => {
                   // setStatus("Something went wrong. Please try again.");
                   setStatus(
                     <div className="alert alert-success" role="alert">
-                      Something went wrong. Please try again.{" "}
+                      Something went wrong. Please try again. 
                     </div>
                   );
                 }
@@ -60,7 +63,7 @@ const NewPost = (props) => {
                 // setStatus("Something went wrong. Please try again.");
                 setStatus(
                   <div className="alert alert-success" role="alert">
-                    Something went wrong. Please try again.{" "}
+                    Something went wrong. Please try again. 
                   </div>
                 );
               }

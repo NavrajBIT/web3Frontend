@@ -276,7 +276,6 @@ export const getPostLikes = async( clubId, postId ) =>{
   formData.append("clubId" , clubId);
   formData.append("postId" , postId);
 
-
   const response = await fetch(url, { method: "POST", body: formData })
   .then((res) => {
     return res.json();
@@ -285,4 +284,5 @@ export const getPostLikes = async( clubId, postId ) =>{
     return "Server error";
   });
   return response;
+  
 }

@@ -110,21 +110,39 @@
   list-style: none;
 }
 
-.likeCount {
-  font-weight: bolder;
-  color: black !important;
-  font-size: 2.4rem;
-  margin: 2vh;
+.likecount p{
+  margin-top: 3vh;
+  font-size: 4vh;
 }
+
 
 .status {
   width: 80vw;
   margin: auto;
 }
+.like{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
 
 .like button {
   cursor: pointer;
+  background-color: transparent;
+  color: white;
+  /* margin-top:2vh ; */
 }
+
+
+/* dummy post details starting */
+.dummypostdetails{
+  border: 1px solid white;
+  background-color: black;
+
+}
+/* dummy post details starting */
+
 
 @media (min-width: 300px) and (max-width: 480px) {
   .clubPic {
